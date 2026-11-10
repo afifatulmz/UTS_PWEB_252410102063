@@ -2,7 +2,7 @@
 
 <header class="flex items-center justify-between px-4 md:px-8 py-3 border-b border-indigo-900/60 bg-slate-950/70">
     <div class="font-mono text-lg font-bold text-amber-300 tracking-wide">
-        ✦ ORBITRA LAB
+    ORBITRA LAB
     </div>
     <div class="flex items-center gap-3 text-sm">
         <span class="text-slate-400">User:</span>

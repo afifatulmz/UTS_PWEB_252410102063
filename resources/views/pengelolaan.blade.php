@@ -3,13 +3,6 @@
 @section('title', 'Pengelolaan')
 
 @section('content')
-@php
-    $warna = [
-        'Tersedia'  => 'text-emerald-300 ',
-        'Dipinjam'  => 'text-amber-300',
-        'Perawatan' => 'text-red-300',
-    ];
-@endphp
 
 <h1 class="text-2xl font-bold">Pengelolaan Inventaris</h1>
 <p class="text-slate-400 mt-1 mb-5">Daftar alat observasi laboratorium.</p>
@@ -36,8 +29,11 @@
                     <td class="px-4 py-3">{{ $alat['kategori'] }}</td>
                     <td class="px-4 py-3">{{ $alat['lokasi'] }}</td>
                     <td class="px-4 py-3">
-                        <span class="inline-flex items-center gap-1.5 px-2 py-1 rounded-full {{ $warna[$alat['status']] }}">
+                        <span class="inline-flex items-center gap-1.5 px-2 py-1 rounded-full {{ $warna[$alat['status']] ?? 'text-slate-300' }}">
                         <span class="h-2 w-2 rounded-full bg-current"></span>
+                            {{ $alat['status'] }}
+                        </span>
+                    </td>
                         {{ $alat['status'] }}
                         </span>
                     </td>

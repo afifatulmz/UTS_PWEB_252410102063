@@ -45,8 +45,15 @@ class PageController extends Controller
         }
 
         $inventaris = $this->getInventaris();
-        return view('pengelolaan', compact('username', 'inventaris'));
+        $warna = [
+        'Tersedia'  => 'text-emerald-300 ',
+        'Dipinjam'  => 'text-amber-300',
+        'Perawatan' => 'text-red-300',
+        ];
+        return view('pengelolaan', compact('username', 'inventaris', 'warna'));
     }
+
+        
 
     public function profile(Request $request)
     {
@@ -78,4 +85,5 @@ class PageController extends Controller
         ];
     }
 
-}   
+
+}  
